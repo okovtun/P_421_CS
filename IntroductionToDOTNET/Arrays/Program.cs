@@ -88,6 +88,20 @@ namespace Arrays
 			}
 			Console.WriteLine();
 
+			//Сумма элементов массива:
+			int sum = 0;
+			for (int i = 0; i < arr.GetLength(0); i++)
+			{
+				for (int j = 0; j < arr.GetLength(1); j++)
+				{
+					sum += arr[i, j];
+				}
+			}
+			Console.WriteLine($"Сумма элементов массива: {sum}");
+			Console.WriteLine($"Среднее-арифметическое элементов массива: {(double)sum/arr.Length}");
+			Console.WriteLine(delimiter);
+			Console.WriteLine($"Сумма элементов массива: {arr.Cast<int>().Sum()}");
+			Console.WriteLine($"Среднее-арифметическое:  {arr.Cast<int>().Average()}");
 		}
 	}
 }
