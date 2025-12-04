@@ -61,7 +61,77 @@ namespace OOP
 			}
 		}
 
+		//				Constructors:
+		public Point()
+		{
+			Console.WriteLine($"DefaultConstructor:\t{this.GetHashCode()}");
+		}
+		public Point(double x=0, double y=0)
+		{
+			this.X = x;
+			this.Y = y;
+			Console.WriteLine($"Constructor:\t\t{this.GetHashCode()}");
+		}
+		public Point(Point other)
+		{
+			this.X = other.X;
+			this.Y = other.Y;
+			Console.WriteLine($"CopyConstructor:\t{this.GetHashCode()}");
+		}
+		~Point()
+		{
+			//Destructor - это метод, который уничтожает объект по завершении его времени жизни.
+			Console.WriteLine($"Destructor:\t\t{this.GetHashCode()}");
+		}
+
+		//				Operators:
+		public static Point operator+(Point left, Point right)
+		{
+			//Point result = new Point
+			//	(
+			//	left.X + right.X,
+			//	left.Y + right.Y
+			//	);
+			//return result;
+
+			return new Point
+				(
+					left.X + right.X,
+					left.Y + right.Y
+				);
+		}
+		public static Point operator ++(Point obj)
+		{
+			obj.X++;
+			obj.Y++;
+			return new Point(obj);
+		}
+
+		public static bool operator ==(Point left, Point right)
+		{
+			return left.X == right.X && left.Y == right.Y;
+		}
+		public static bool operator !=(Point left, Point right)
+		{
+			return left.X != right.X || left.Y != right.Y;
+		}
+		public static bool operator >(Point left, Point right)
+		{
+			return left.X + left.Y > right.X + right.Y;
+		}
+		public static bool operator <(Point left, Point right)
+		{
+			return left.X + left.Y < right.X + right.Y;
+		}
+
 		//				Methods:
+		public double Distance(Point other)
+		{
+			double x_distance = this.X - other.X;
+			double y_distance = this.Y - other.Y;
+			double distance = Math.Sqrt(x_distance * x_distance + y_distance * y_distance);
+			return distance;
+		}
 		public void Print()
 		{
 			Console.WriteLine($"X = {x}\tY = {y}");
