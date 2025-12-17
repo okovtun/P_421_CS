@@ -2,8 +2,11 @@
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIPslHOQpZjqNXiQ-l4I2ERD
 
 TODO:
-1. Сохранить группу в CSV-файл (System.IO.StreamWriter);
+1. Сохранить группу в CSV-файл (System.IO.StreamWriter);		DONE
 2. Загрузить группу из CSV-файла в массив (System.IO.StreamReader);
+
+CSV - Comma Separated Values (Значения разделенные запятой)
+CSV - это один из простейших форматов Базы Данных.
 
 DONE:
 1. Написать класс 'Graduate', который описывает дипломника;		DONE
