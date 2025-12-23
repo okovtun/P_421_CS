@@ -54,8 +54,11 @@ namespace Academy
 		public static Human[] Load(string filename)
 		{
 			List<Human> group = new List<Human>();
+			//Exceptions
+			//try ... catch ...
 			try
 			{
+				//Потенциально опасный код - код, в котором может возникнуть исключительная ситуация:
 				Directory.SetCurrentDirectory("..\\..");
 				Console.WriteLine(Directory.GetCurrentDirectory());
 				StreamReader reader = new StreamReader(filename);
@@ -71,6 +74,7 @@ namespace Academy
 					group.Add(Factory.Create(values[0]).Init(values));
 				}
 				reader.Close();
+				throw new Exception("Бросаем исключение");
 			}
 			catch (Exception ex)
 			{

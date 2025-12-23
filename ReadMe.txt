@@ -2,6 +2,9 @@
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIPslHOQpZjqNXiQ-l4I2ERD
 
 TODO:
+1. Пользователь вводит число с клавиатуры, а программа выводит на экран факториал этого числа;
+
+DONE:
 1. Сохранить группу в CSV-файл (System.IO.StreamWriter);		DONE
 2. Загрузить группу из CSV-файла в массив (System.IO.StreamReader);
 
