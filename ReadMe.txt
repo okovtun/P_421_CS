@@ -2,6 +2,9 @@
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIPslHOQpZjqNXiQ-l4I2ERD
 
 TODO:
+1. В класс 'ForwardList' добавить метод push_back(), который добавляет элемент в конец списка;
+
+DONE:
 1. Диаметр круга должен рисоваться под углом 45 градусов;
 2. Добавить и реализовать интерфейс 'IHaveHeight';
 3. Добавить в иерархию треугольников прямоугольный;
