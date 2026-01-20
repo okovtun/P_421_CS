@@ -41,9 +41,38 @@ public:
 		size = 0;
 		cout << "LConstructor:\t" << this << endl;
 	}
+	ForwardList(const ForwardList& other)
+	{
+		//this  - этот список
+		//other - тот список
+		/*Element* Temp = other.Head;
+		while (Temp)
+		{
+			push_back(Temp->Data);
+			Temp = Temp->pNext;
+		}*/
+		//			Counter;		Condition;	Expression
+		//Counter - отрабатывает 1 раз, перед первой итерацией и объявляет счетчик(Итератор);
+		//Condition - условие продолжения или завершения цикла, отабатывает перед каждой итерацией;
+		//Expression - увеличивает счетчик или итератор, отрабатывает после каждой итерации;
+		//			int i = 0		;	i < n;		i++
+		for (Element* Temp = other.Head; Temp; Temp = Temp->pNext)
+			push_back(Temp->Data);
+		cout << "CopyConstructor:\t" << this << endl;
+	}
 	~ForwardList()
 	{
+		while (Head)pop_front();
 		cout << "LDestructor:\t" << this << endl;
+	}
+
+	//				Operators:
+	ForwardList& operator=(const ForwardList& other)
+	{
+		while (Head)pop_front();
+		for (Element* Temp = other.Head; Temp; Temp = Temp->pNext)push_back(Temp->Data);
+		cout << "CopyAssignment:\t" << this << endl;
+		return *this;
 	}
 
 	//				Adding elements:
@@ -163,13 +192,18 @@ void main()
 	//list.pop_back();
 	//list.print();
 
-	int index;
+	/*int index;
 	int value;
 	cout << "Введите индекс добавляемого элемента: "; cin >> index;
 	cout << "Введите значение добавляемого элемента: "; cin >> value;
 	list.insert(value, index);
-	list.print();
+	list.print();*/
 #endif // BASE_CHECK
+
+	//ForwardList list2 = list;	//Copy constructor - Deep copy (Побитовое копирование)
+	ForwardList list2;
+	list2 = list;	//CopyAssignment - Оператор присваивания
+	list2.print();
 
 #ifdef MULTIPLE_LISTS
 	ForwardList list1;
