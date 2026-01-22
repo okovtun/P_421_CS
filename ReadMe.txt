@@ -2,6 +2,9 @@
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIPslHOQpZjqNXiQ-l4I2ERD
 
 TODO:
+В Solution 'DataContainers' добавить проект 'List' и в нем реализовать двусвязный список;
+
+DONE:
 Проверочный код должен заработать:
 	ForwardList list = { 3, 5, 8, 13, 21 };
 	for(int i:list)cout << i << tab;
