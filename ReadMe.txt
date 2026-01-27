@@ -2,6 +2,10 @@
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIPslHOQpZjqNXiQ-l4I2ERD
 
 TODO:
+1. Написать и проверить метод Insert();
+2. Написать и проверить метод Erase();
+
+DONE:
 В Solution 'DataContainers' добавить проект 'List' и в нем реализовать двусвязный список;
 
 DONE:
