@@ -2,8 +2,10 @@
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIPslHOQpZjqNXiQ-l4I2ERD
 
 TODO:
-1. Написать и проверить метод Insert();
+1. Написать и проверить метод Insert();	DONE
 2. Написать и проверить метод Erase();
+3. Алгоритм добавления элемента в методе Insert() нужно реализовать одним выражением;
+4. Проверочный код с 'ReverseIterator' должен заработать;
 
 DONE:
 В Solution 'DataContainers' добавить проект 'List' и в нем реализовать двусвязный список;
